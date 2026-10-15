@@ -1,0 +1,26 @@
+{
+    "name": "aiInvestigationDetails",
+    "title": "AI Investigation Details",
+    "subTitle": "AI Investigation Details widget",
+    "version": "1.1.0",
+    "published_date": 1786425733,
+    "releaseNotes": "unavailable",
+    "metadata": {
+        "description": "AI Investigation Details widget to monitor AI Summary",
+        "pages": [
+            "View Panel"
+        ],
+        "certified": "Yes",
+        "publisher": "Fortinet",
+        "help_online": "https://github.com/fortinet-fortisoar/widget-ai-investigation-details/blob/release/1.1.0/README.md",
+        "compatibility": [
+            "8.0.1"
+        ],
+        "category": [
+            "LLM",
+            "Machine Learning"
+        ],
+        "associatedWidgets": ["aiAgentTraceability"]
+    },
+    "development": false
+}

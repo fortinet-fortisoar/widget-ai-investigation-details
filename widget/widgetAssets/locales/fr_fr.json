@@ -1,0 +1,28 @@
+{
+    "aiInvestigationDetails": {
+        "ACCORDION_TITLE_HIGHLIGHTS": "Points forts",
+        "ACCORDION_TITLE_KEY_FINDINGS": "Principales conclusions",
+        "ACCORDION_TITLE_NEXT_STEPS": "Étapes suivantes",
+        "BUTTON_LABEL_TRIAGE": "Démarrer l'enquête sur l'alerte par IA",
+        "BUTTON_LABEL_REINVESTIGATE": "Ré-enquêter",
+        "ERROR_INVESTIGATION_FAILED": "L'enquête a échoué",
+        "ERROR_NO_EVIDENCE_FOUND": "Aucune preuve trouvée",
+        "ERROR_PERMISSION":"Vous ne pouvez pas accéder à ce widget car vous n’avez pas les autorisations nécessaires ou la fonctionnalité IA n’est pas activée. Essayez d’activer la fonctionnalité ou contactez votre administrateur pour obtenir de l’aide.",
+        "LABEL_EVIDENCE": "Preuve",
+        "LABEL_HEADING": "Lancez l'enquête automatisée - des métadonnées au verdict en une minute",
+        "LABEL_HEADING_2": "Laissez l'IA analyser les alertes, résumer les preuves et vous guider vers le bon verdict",
+        "LABEL_NO_QUESTIONS": "Aucune question générée",
+        "LABEL_NOT_CONFIGURABLE": "Le widget n'est pas configurable",
+        "LABEL_INVESTIGATION_QUEUED":"Enquête en file d’attente",
+        "LABEL_QUESTION": "Question",
+        "LABEL_QUESTIONS": "Questions d’enquête",
+        "LABEL_THINKING": "Réflexion en cours",
+        "LABEL_TACTICS": "Tactiques",
+        "LABEL_TECHNIQUES": "Techniques",
+        "TITLE_HYPOTHESIS_DETAIL": "Détails de l'hypothèse",
+        "TITLE_HYPOTHESIS_QUESTION_1": "Qu'est-ce qui est détecté ?",
+        "TITLE_HYPOTHESIS_QUESTION_2": "Que pourrait-il se passer ?",
+        "TITLE_SUPPORTING_FACTORS": "Facteurs de soutien",
+        "TITLE_WEAKENING_FACTORS": "Facteurs d'affaiblissement"
+    }
+}

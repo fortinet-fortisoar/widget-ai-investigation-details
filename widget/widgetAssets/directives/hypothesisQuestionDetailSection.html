@@ -1,0 +1,57 @@
+<!-- Copyright start
+  Copyright (C) 2008 - 2026 Fortinet Inc.
+  All rights reserved.
+  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
+  Copyright end -->
+<div class="display-flex full-height align-items-center justify-content">
+    <div class="questions-details-block" data-ng-class="{ 'show-line': showLine }">
+        <div class="question-details-block-title position-relative">{{ currentQuestionDetail.agent_label || currentQuestionDetail.agent_hint }}
+            <span class="content-box cursor-pointer" data-ng-click="closeDetails()">
+                x
+            </span>
+            <btn class="btn-trace-flow btn btn-sm" data-ng-click="showTraceFlowPanel($event)" title="Trace Flow" data-ng-disabled="traceFlow.visible">
+                <i class="icon icon-traceability font-size-16 trace-image-position"></i>
+            </btn>
+        </div>
+        <div class="padding-20 hypothesis-questions-detail-content">
+            <div class="padding-bottom-xlg hypothesis-questions-detail-inner-content">
+                <div class="ai-content-title">
+                    {{ :: 'aiInvestigationDetails.LABEL_QUESTION' | translate }}
+                </div>
+                <div class="ai-content margin-top-sm">
+                    {{ currentQuestionDetail.question }}
+                </div>
+            </div>
+            <div class="padding-bottom-xlg hypothesis-questions-detail-inner-content">
+                <div class="ai-content-title margin-top-xlg">
+                    {{ :: 'APP.LABEL.INPUT' | translate }}
+                </div>
+                <div class="ai-content margin-top-sm" ng-repeat="(key, value) in currentQuestionDetail.params">
+                    <span data-ng-if="key !== 'question'"><span class="text-capitalize">{{key}} </span>:
+                        <span>{{value}}</span></span>
+                </div>
+            </div>
+            <div class="padding-bottom-xlg hypothesis-questions-detail-inner-content">
+                <div class="ai-content-title margin-top-xlg">
+                    {{ :: 'PLAYBOOKS.DESIGNER.STEP_ARGUMENTS.LABEL_RESPONSE' | translate }}
+                </div>
+                <div class="ai-content margin-top-sm">
+                    {{ currentQuestionDetail.result }}
+                </div>
+            </div>
+            <div class="padding-bottom-xlg hypothesis-questions-detail-inner-content">
+                <div class="ai-content-title margin-top-xlg">
+                    {{ :: 'aiInvestigationDetails.LABEL_EVIDENCE' | translate }}
+                </div>
+                <div class="ai-content margin-top-sm">
+                    {{ currentQuestionDetail.evidence }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="trace-flow-slider margin-left-111 full-height align-items-center" data-ng-if="traceFlow.visible"
+        ng-class="{ 'trace-flow-slider--open': traceFlow.visible }">
+        <show-trace-flow data-current-question-detail="currentQuestionDetail"
+            data-close-trace-flow="closeTraceFlow()"></show-trace-flow>
+    </div>
+</div>

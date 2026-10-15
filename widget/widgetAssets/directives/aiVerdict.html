@@ -1,0 +1,26 @@
+<!-- Copyright start
+  Copyright (C) 2008 - 2026 Fortinet Inc.
+  All rights reserved.
+  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
+  Copyright end -->
+<div class="verdictFailed" data-ng-if="stepStatus==='failed'">
+        <div class="padding-top-sm display-inline-block">{{ :: 'aiInvestigationDetails.ERROR_INVESTIGATION_FAILED' | translate }}
+        </div>
+        <button type="submit" class="btn align-self-center btn-sm btn-default margin-right-sm float-right"
+                id="re-investigate" ng-on-click="reInvestigate()"><i
+                        class="fa fa-refresh margin-left-sm margin-right-sm"></i>{{ :: 'aiInvestigationDetails.BUTTON_LABEL_REINVESTIGATE' | translate }}</button>
+</div>
+<div data-ng-if="investigationErrorPresent" class="error-msg font-size-12 margin-top-sm">
+       <i class="fa fa-exclamation-triangle"></i>  {{investigationFailedMessage}}
+</div>
+<div class="verdictContainer padding-left-sm sections-height" data-ng-if="stepStatus==='completed'">
+        <div class="verdictTitle hypothesis-details-block-details-bg">
+                <div class="bold padding-top-sm display-inline-block">Verdict:
+                </div> <span class="verdictLabel bold" data-ng-style="{'color' : finalSummary.verdictColor}">{{finalSummary.classification}}</span>
+                <div data-ng-if="stepStatus==='failed'" class="padding-top-sm display-inline-block">{{ :: 'aiInvestigationDetails.ERROR_INVESTIGATION_FAILED' | translate }}</div>
+                <button type="submit" class="btn align-self-center btn-sm btn-default margin-right-sm float-right"
+                        id="re-investigate" ng-on-click="reInvestigate()"><i
+                                class="fa fa-refresh margin-left-sm margin-right-sm"></i>{{ :: 'aiInvestigationDetails.BUTTON_LABEL_REINVESTIGATE' | translate }}</button>
+        </div>
+        <div data-ng-include="AI_TAB_VERDICT" class="verdictContent margin-top-sm hypothesis-details-block-details-bg"></div>
+</div>

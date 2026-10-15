@@ -1,0 +1,42 @@
+<!-- Copyright start
+  Copyright (C) 2008 - 2026 Fortinet Inc.
+  All rights reserved.
+  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
+  Copyright end -->
+<div class="widget widget-container chart aiInvestigationContainer">
+    <div data-ng-if="!(aiAgentsPermissionsValid) || !aiFeatureEnabled">
+        <div class="col-md-12 margin-bottom-xlg padding-bottom-xlg margin-top-lg">
+            <div class="alert alert-info margin-bottom-0">
+                <div class="pull-left font-size-18 margin-top-sm width-30px">
+                    <i class="fa fa-exclamation-circle"></i>
+                </div>
+                <div class="pull-left width-95 margin-top-8">
+                    <p class="font-size-14 margin-bottom-0">{{ :: 'aiInvestigationDetails.ERROR_PERMISSION' | translate }}
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div data-ng-if="aiAgentsPermissionsValid && aiFeatureEnabled">
+        <div class="padding-left-lg padding-bottom-lg" data-ng-if="!showInvestigationSections">
+            <div class="text-center margin-top-10per">
+                <img data-ng-src="{{botIcon}}" class="margin-top-md botSVG" alt="Bot">
+                <div>{{ 'aiInvestigationDetails.LABEL_HEADING' | translate }}</div>
+                <div>{{ 'aiInvestigationDetails.LABEL_HEADING_2' | translate }} </div>
+                <button type="submit" class="btn btn-primary align-self-center margin-top-md" id="showTriagId"
+                    ng-on-click="beginAIPowerAlertTriage()">
+                    {{ 'aiInvestigationDetails.BUTTON_LABEL_TRIAGE' | translate }} 
+                </button>
+            </div>
+        </div>
+        <cs-spinner data-ng-show="showInvestigationSections && loadingResultData" class="state-wait" data-show-background="true"></cs-spinner>
+        <div class="investigationSections row no-border hypothesisBackground fade-wrapper align-items-center {{currentTheme}} overflow-hidden" data-ng-class="{'display-flex': showSummaryWindow, 'justify-content-space-evenly':showSummaryWindow}" data-ng-if="showInvestigationSections && !loadingResultData">
+                    <div data-ng-show="stepStatus!=='completed' && stepStatus!=='failed' && showSummaryWindow" class="taskPanelPhases" data-ng-include="AI_PHASES"></div>
+                    <hypothesis-chart hypothesis-data="hypothesis" step-status="stepStatus" data-ng-if="showSummaryWindow" show-details-window="showHypothesisDetails(data, index)" class="display-flex align-items-center justify-content col-md-8 hypothesis-chart padding-md" data-load-trace-flow="loadTraceFlow()" data-ng-class="{'fade-out-panel': showSummaryWindow}"></hypothesis-chart>
+                    <hypothesis-details class="hypothesis-details" current-hypothesis-data="currentHypothesisData" data-ng-show="!showSummaryWindow" show-summary-window="showSummaryWindow" back-to-summary="goBackToSummaryWindow()" data-ng-class="{'fade-panel': !showSummaryWindow}"></hypothesis-details>
+                    <div data-ng-show="(stepStatus==='completed' || stepStatus==='failed') && showSummaryWindow" data-ng-include="AI_VERDICT" data-ng-init="reInvestigate = reInvestigateTriage" class="col-md-4 padding-0" data-ng-class="{'fade-panel': showSummaryWindow}"></div>
+        </div>  
+    </div>
+</div>
+</div>

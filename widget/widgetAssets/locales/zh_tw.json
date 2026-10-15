@@ -1,0 +1,28 @@
+{
+    "aiInvestigationDetails": {
+        "ACCORDION_TITLE_HIGHLIGHTS": "重點摘要",
+        "ACCORDION_TITLE_KEY_FINDINGS": "主要發現",
+        "ACCORDION_TITLE_NEXT_STEPS": "後續步驟",
+        "BUTTON_LABEL_TRIAGE": "開始 AI 驅動警報調查",
+        "BUTTON_LABEL_REINVESTIGATE": "重新調查",
+        "ERROR_INVESTIGATION_FAILED": "調查失敗",
+        "ERROR_NO_EVIDENCE_FOUND": "未發現證據",
+        "ERROR_PERMISSION":"您無法存取此小工具，因為您沒有相關權限或 AI 功能尚未啟用。請嘗試啟用該功能或聯絡您的管理員以取得協助。",
+        "LABEL_EVIDENCE": "證據",
+        "LABEL_HEADING": "啟動自動化調查 — 從元數據到判定僅需數分鐘",
+        "LABEL_HEADING_2": "讓 AI 分析警報、總結證據，並指引您做出正確判定",
+        "LABEL_NO_QUESTIONS": "未產生問題",
+        "LABEL_NOT_CONFIGURABLE": "小工具不可配置",
+        "LABEL_INVESTIGATION_QUEUED":"調查已排隊",
+        "LABEL_QUESTION": "問題",
+        "LABEL_QUESTIONS": "調查問題",
+        "LABEL_THINKING": "思考中",
+        "LABEL_TACTICS": "戰術",
+        "LABEL_TECHNIQUES": "技巧",
+        "TITLE_HYPOTHESIS_DETAIL": "假設詳情",
+        "TITLE_HYPOTHESIS_QUESTION_1": "偵測到什麼？",
+        "TITLE_HYPOTHESIS_QUESTION_2": "可能發生了什麼？",
+        "TITLE_SUPPORTING_FACTORS": "支持因素",
+        "TITLE_WEAKENING_FACTORS": "削弱因素"
+    }
+}

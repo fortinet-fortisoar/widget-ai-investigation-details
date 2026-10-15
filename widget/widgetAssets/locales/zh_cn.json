@@ -1,0 +1,28 @@
+{
+    "aiInvestigationDetails": {
+        "ACCORDION_TITLE_HIGHLIGHTS": "亮点摘要",
+        "ACCORDION_TITLE_KEY_FINDINGS": "主要发现",
+        "ACCORDION_TITLE_NEXT_STEPS": "后续步骤",
+        "BUTTON_LABEL_TRIAGE": "开始 AI 驱动警报调查",
+        "BUTTON_LABEL_REINVESTIGATE": "重新调查",
+        "ERROR_INVESTIGATION_FAILED": "调查失败",
+        "ERROR_NO_EVIDENCE_FOUND": "未发现证据",
+        "ERROR_PERMISSION":"您无法访问此小组件，因为您没有相关权限或 AI 功能未启用。请尝试启用该功能或联系您的管理员获取帮助。",
+        "LABEL_EVIDENCE": "证据",
+        "LABEL_HEADING": "启动自动化调查 — 从元数据到判定仅需数分钟",
+        "LABEL_HEADING_2": "让 AI 分析警报、总结证据，并指引您做出正确判定",
+        "LABEL_NO_QUESTIONS": "未生成问题",
+        "LABEL_NOT_CONFIGURABLE": "小组件不可配置",
+        "LABEL_INVESTIGATION_QUEUED":"调查已排队",
+        "LABEL_QUESTION": "问题",
+        "LABEL_QUESTIONS": "调查问题",
+        "LABEL_THINKING": "思考中",
+        "LABEL_TACTICS": "战术",
+        "LABEL_TECHNIQUES": "技巧",
+        "TITLE_HYPOTHESIS_DETAIL": "假设详情",
+        "TITLE_HYPOTHESIS_QUESTION_1": "检测到了什么？",
+        "TITLE_HYPOTHESIS_QUESTION_2": "可能发生了什么？",
+        "TITLE_SUPPORTING_FACTORS": "支持因素",
+        "TITLE_WEAKENING_FACTORS": "削弱因素"
+    }
+}

@@ -1,0 +1,21 @@
+<!-- Copyright start
+  Copyright (C) 2008 - 2026 Fortinet Inc.
+  All rights reserved.
+  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
+  Copyright end -->
+<div class="display-flex full-height align-items-center">
+  <div class="trace-flow-block full-height">
+    <div class="trace-flow-title position-relative">{{ currentQuestionDetail.agent_label || currentQuestionDetail.agent_hint }} Trace Flow
+      <span class="content-box cursor-pointer" data-ng-click="closeTraceFlow()">
+        x
+      </span>
+    </div>
+    <div class="trace-flow-content">
+      <div class="scaled-container">
+        <div data-cs-widget class="full-height full-width"
+          data-definition="{ type: 'aiAgentTraceability', config: { trace_id: currentQuestionDetail.uuid, isEmbeddedView: true } }">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

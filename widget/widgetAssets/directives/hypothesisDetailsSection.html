@@ -1,0 +1,64 @@
+<!-- Copyright start
+  Copyright (C) 2008 - 2026 Fortinet Inc.
+  All rights reserved.
+  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
+  Copyright end -->
+<div class="hypothesis-details-block margin-right-negative20">
+    <div class="hypothesis-details-block-title">{{ :: 'aiInvestigationDetails.TITLE_HYPOTHESIS_DETAIL' | translate }}</div>
+    <div class="padding-15 hypothesis-details-block-details-bg">
+    <div class="hypothesis-details-block-details padding-sm">
+        <div class="ai-content-title">
+            {{ :: 'aiInvestigationDetails.TITLE_HYPOTHESIS_QUESTION_1' | translate }}
+        </div>
+        <div class="ai-content margin-top-sm">
+            {{currentHypothesisData.description}}
+        </div>
+        <div class="ai-content-title padding-top-md divider-border margin-top-md">
+           {{ :: 'aiInvestigationDetails.TITLE_HYPOTHESIS_QUESTION_2' | translate }}
+        </div>
+        <div class="ai-content margin-top-sm">
+            {{currentHypothesisData.reasoning}}
+        </div>
+        <div class="margin-top-md divider-border">
+            <div class="ai-content-title margin-top-md"> {{ :: 'aiInvestigationDetails.TITLE_SUPPORTING_FACTORS' | translate }} : <span
+                    class="support-count-color-box font-weight-normal">{{currentHypothesisData.supports.length ?
+                    currentHypothesisData.supports.length : 0}}</span></div>
+            <ol type="1" class="ai-content"
+                data-ng-if="currentHypothesisData.supports.length>0">
+                <li ng-repeat="support in currentHypothesisData.supports track by $index" data-ng-class="{'text-muted': !support.evidence }" class="margin-top-sm">
+                    {{support.evidence || ( 'aiInvestigationDetails.ERROR_NO_EVIDENCE_FOUND' | translate) }}
+                </li>
+            </ol>
+        </div>
+        <div class="margin-top-md divider-border">
+            <div class="ai-content-title margin-top-md"> {{ :: 'aiInvestigationDetails.TITLE_WEAKENING_FACTORS' | translate }} : <span
+                    class="weaken-count-color-box font-weight-normal">{{currentHypothesisData.weakens.length ?
+                    currentHypothesisData.weakens.length : 0}}</span></div>
+            <ol type="1" class="ai-content padding-top-sm"
+                data-ng-if="currentHypothesisData.weakens.length>0">
+                <li ng-repeat="weaken in currentHypothesisData.weakens track by $index"  data-ng-class="{'text-muted': !weaken.evidence }" class="margin-top-sm">
+                    {{weaken.evidence || ( 'aiInvestigationDetails.ERROR_NO_EVIDENCE_FOUND' | translate) }}
+                </li>
+            </ol>
+        </div>
+        <div class="ai-content-title margin-top-md padding-top-md divider-border"
+            data-ng-if="currentHypothesisData.tactics">
+            {{ :: 'aiInvestigationDetails.LABEL_TACTICS' | translate }}
+            <span class="ai-content" data-ng-if="currentHypothesisData.tactics.length===0">:
+                NA</span>
+            <ul class="ai-content padding-top-sm" data-ng-if="currentHypothesisData.tactics.length>0">
+                <li ng-repeat="tactic in currentHypothesisData.tactics track by $index">{{tactic}} </li>
+            </ul>
+        </div>
+        <div class="ai-content-title margin-top-md" data-ng-if="currentHypothesisData.techniques"
+            data-ng-class="{'margin-bottom-md': currentHypothesisData.techniques.length===0 }">
+            {{ :: 'aiInvestigationDetails.LABEL_TECHNIQUES' | translate }}
+            <span class="ai-content" data-ng-if="currentHypothesisData.techniques.length===0">:
+                NA</span>
+            <ul class="ai-content padding-top-sm" data-ng-if="currentHypothesisData.techniques.length>0">
+                <li ng-repeat="tech in currentHypothesisData.techniques track by $index">{{tech}} </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>

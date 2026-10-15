@@ -1,0 +1,3 @@
+{
+    "agents": ["Task Planner Agent", "Alert Investigation Agent","Threat Intelligence Provider Agent", "Organization Context Provider Agent", "Traces"]
+}

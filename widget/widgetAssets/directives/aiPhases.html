@@ -1,0 +1,17 @@
+<!-- Copyright start
+  Copyright (C) 2008 - 2026 Fortinet Inc.
+  All rights reserved.
+  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
+  Copyright end -->
+  <div data-ng-if="(!phaseStatusList || phaseStatusList.length===0) && stepStatus === 'inprogress'" class="dots text-center">
+    {{ :: 'aiInvestigationDetails.LABEL_THINKING' | translate }}
+  </div>
+  <div data-ng-if="(!phaseStatusList || phaseStatusList.length===0) && stepStatus !== 'inprogress'" class="phaseLoader text-center">
+    {{ :: 'aiInvestigationDetails.LABEL_INVESTIGATION_QUEUED' | translate }}
+  </div>
+  <div data-ng-if="phaseStatusList && phaseStatusList.length>0">
+    <div data-ng-repeat="phases in phaseStatusList track by $index" class="padding-bottom-lg">
+      <i class="fa" data-ng-class="{'fa-check-circle': phases.status === 'completed','fa-spinner': phases.status === 'inprogress', 'fa-spin' : phases.status === 'inprogress' }"></i>
+      <span>{{phases.data.message}}</span>
+    </div>
+  </div>

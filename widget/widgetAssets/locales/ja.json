@@ -1,0 +1,28 @@
+{
+    "aiInvestigationDetails": {
+        "ACCORDION_TITLE_HIGHLIGHTS": "ハイライト",
+        "ACCORDION_TITLE_KEY_FINDINGS": "主な調査結果",
+        "ACCORDION_TITLE_NEXT_STEPS": "次のステップ",
+        "BUTTON_LABEL_TRIAGE": "AIによるアラート調査を開始",
+        "BUTTON_LABEL_REINVESTIGATE": "再調査",
+        "ERROR_INVESTIGATION_FAILED": "調査に失敗しました",
+        "ERROR_NO_EVIDENCE_FOUND": "証拠が見つかりません",
+        "ERROR_PERMISSION":"権限がないか、AI機能が有効になっていないため、このウィジェットにアクセスできません。機能を有効にするか、管理者にお問い合わせください。",
+        "LABEL_EVIDENCE": "証拠",
+        "LABEL_HEADING": "自動調査を開始 - メタデータから判定までを数分で",
+        "LABEL_HEADING_2": "AIがアラートを分析し、証拠を要約して、適切な判定へと導きます",
+        "LABEL_NO_QUESTIONS": "生成された質問はありません",
+        "LABEL_NOT_CONFIGURABLE": "ウィジェットは設定不可です",
+        "LABEL_INVESTIGATION_QUEUED":"調査がキューに入っています",
+        "LABEL_QUESTION": "質問",
+        "LABEL_QUESTIONS": "調査に関する質問",
+        "LABEL_THINKING": "考え中",
+        "LABEL_TACTICS": "戦術",
+        "LABEL_TECHNIQUES": "手法",
+        "TITLE_HYPOTHESIS_DETAIL": "仮説の詳細",
+        "TITLE_HYPOTHESIS_QUESTION_1": "何が検出されましたか？",
+        "TITLE_HYPOTHESIS_QUESTION_2": "何が起きている可能性がありますか？",
+        "TITLE_SUPPORTING_FACTORS": "肯定的な要因",
+        "TITLE_WEAKENING_FACTORS": "否定的な要因"
+    }
+}

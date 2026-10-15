@@ -1,0 +1,57 @@
+<!-- Copyright start
+  Copyright (C) 2008 - 2026 Fortinet Inc.
+  All rights reserved.
+  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
+  Copyright end -->
+<div class="summaryPageContainer full-height">
+    <button type="submit" class="btn align-self-center margin-top-md btn-sm btn-primary float-left margin-right-sm margin-left-lg"
+        id="closeDetails" ng-on-click="closeDetails()"><i class="fa fa-arrow-left margin-left-sm margin-right-sm"></i>{{:: 'APP.BUTTON.BACK' | translate}}</button>
+    <div class="parent-container display-flex" ng-class="{'shift-left--26': (showQuestionDetails && !traceFlow.visible), 'shift-left--46': (showQuestionDetails && traceFlow.visible), 'child-container-width-120': (showQuestionDetails && !traceFlow.visible), 'child-container-width-220': (showQuestionDetails && traceFlow.visible)  }">
+        <div class="display-flex justify-content clear-both padding-lg child-container full-height">
+            <div data-ng-include="PATH_HYPOTHESIS_DETAILS" currentHypothesisData="currentHypothesisData"></div>
+            <div>
+                <div id="hypothesisDetailsGlow" ng-bind-html="hypothesisDetailsGlowContent" class="margin-top-md hypothesisDetailsGlow"></div>
+            </div>
+            <div class="hypothesis-questions-block margin-left-negative-15" ng-class="{ 'show-line': showLine }">
+                <div class="hypothesis-details-block-title">{{ ::'aiInvestigationDetails.LABEL_QUESTIONS' | translate }}</div>
+                <div class="hypothesis-details-block-details-bg">
+                    <div class="hypothesis-questions-listing">
+                        <div data-ng-if="currentHypothesisData.questions.length === 0" class="text-muted padding-lg">{{ :: 'aiInvestigationDetails.LABEL_NO_QUESTIONS' | translate }}</div>
+                        <div data-ng-if="currentHypothesisData.questions.length > 0"
+                            data-ng-repeat="quest in currentHypothesisData.questions track by $index" class="question-listing padding-top-lg"
+                            data-ng-click="setActiveQuestion($index); showQuestionPanel(quest, $event);" data-ng-class="{'active-class': (activeIndex === $index && showLine)}">
+                            <table class="margin-left-md margin-right-md" ng-class="{'steps-table': !$last}">
+                                <tr>
+                                    <!-- Step number -->
+                                    <td class="step-number-cell padding-bottom-lg">
+                                        <span class="step-number">{{ $index + 1 }}</span>
+                                    </td>
+                                    <!-- Step text -->
+                                    <td class="step-text-cell padding-bottom-lg padding-right-53">
+                                        <span class="step-text">
+                                            {{quest.question}}
+                                        </span>
+                                    </td>
+                                    <!-- icon status -->
+                                    <td class="step-icons padding-bottom-lg padding-right-md">
+                                        <i class="status_icon" ng-class="{
+                                                                              'fa fa-check-circle margin-left-sm step-success': quest.status === 'success',
+                                                                              'fa fa-ban margin-left-sm step-failure': quest.status === 'failed',
+                                                                              'fa fa-spinner fa-spin margin-left-sm step-inprogress': quest.status === 'inprogress'
+                                                                            }">
+                                        </i>
+                                    </td>
+                                    <!-- icon arrow -->
+                                    <td class="step-icons padding-bottom-lg">
+                                        <i class="fa fa-chevron-right padding-left-sm"></i></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hypothesis-question-detail-section data-ng-if="showQuestionDetails" data-trace-flow="traceFlow" data-current-question-detail="currentQuestionDetails" data-close-details="closeQuestionDetails()" class="margin-left-111 full-height align-items-center"></hypothesis-question-detail-section>
+        </div>
+    </div>
+</div>

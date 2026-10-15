@@ -1,0 +1,28 @@
+{
+    "aiInvestigationDetails": {
+        "ACCORDION_TITLE_HIGHLIGHTS":"Highlights",
+        "ACCORDION_TITLE_KEY_FINDINGS":"Key Findings",
+        "ACCORDION_TITLE_NEXT_STEPS":"Next Steps",
+        "BUTTON_LABEL_TRIAGE":"Begin AI-Powered Alert Investigation",
+        "BUTTON_LABEL_REINVESTIGATE":"Re-investigate",
+        "ERROR_INVESTIGATION_FAILED":"Investigation failed",
+        "ERROR_NO_EVIDENCE_FOUND":"No evidence found",
+        "ERROR_PERMISSION":"You can’t access this widget because you don’t have permission or the AI feature isn’t enabled. Try enabling the feature or contact your administrator for assistance.",
+        "LABEL_EVIDENCE":"Evidence",
+        "LABEL_HEADING": "Kick off automated investigation - from metadata to verdict in minute",
+        "LABEL_HEADING_2": "Let AI analyze alerts, summarize evidence, and guide you to the right verdict",
+        "LABEL_NO_QUESTIONS":"No questions generated",
+        "LABEL_NOT_CONFIGURABLE":"Widget is not configurable",
+        "LABEL_INVESTIGATION_QUEUED":"Investigation Queued",
+        "LABEL_QUESTION":"Question",
+        "LABEL_QUESTIONS":"Investigation Questions",
+        "LABEL_THINKING":"Thinking",
+        "LABEL_TACTICS":"Tactics",
+        "LABEL_TECHNIQUES":"Techniques",
+        "TITLE_HYPOTHESIS_DETAIL":"Hypothesis Details",
+        "TITLE_HYPOTHESIS_QUESTION_1":"What is detected?",
+        "TITLE_HYPOTHESIS_QUESTION_2":"What could be happening?",
+        "TITLE_SUPPORTING_FACTORS": "Supporting Factors",
+        "TITLE_WEAKENING_FACTORS": "Weakening Factors"
+    }
+}
